@@ -1,8 +1,10 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercicio4 {
     public static void main(String[] args) {
         Scanner marlon = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat(("0.00"));
         double salariominimo;
         double gastokWh;
         double valorkWh;
@@ -28,8 +30,8 @@ public class Exercicio4 {
 
         // salida dados
 
-        System.out.println("Valor de cada quilowatt: " + valorkWh);
-        System.out.println("Valor da conta: " + conta);
-        System.out.println("Valor desconto: " + desconto);
+        System.out.println("Valor de cada quilowatt: " + df.format(valorkWh));
+        System.out.println("Valor da conta: R$" + df.format(conta));
+        System.out.println("Valor desconto: R$" + df.format(desconto));
     }
 }
